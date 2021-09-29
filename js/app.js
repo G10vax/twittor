@@ -1,7 +1,8 @@
 
 if(navigator.serviceWorker)
 {
-    navigator.serviceWorker.register('/sw.js')
+
+    navigator.serviceWorker.register( (window.location.href.includes('localhost'))?'/sw.js':'/twittor/sw.js');
 }
 
 // Referencias de jQuery
